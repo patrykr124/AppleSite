@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import React from "react";
+
 import { rightImg, watchImg } from "../utils";
 import VideoCareousel from "./VideoCareousel";
 import { animateWithGsap } from "../utils/animations";

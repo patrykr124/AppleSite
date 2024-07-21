@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { animateWithGsap } from "../utils/animations";
 import { explore1Img, explore2Img, exploreVideo } from "../utils";
 import gsap from "gsap";
@@ -10,12 +10,24 @@ function Features() {
     gsap.to("#exploreVideo", {
       scrollTrigger: {
         trigger: "#exploreVideo",
-        toggleActions: "play pouse reverse restart",
-        start: "-10% bottom",
+        start: "top 30%",
+        end: "bottom top",
+        scrub: 1.5,
+        onEnter: () => {
+          videoRef.current.play();
+        },
+        onLeave: () => {
+          videoRef.current.pause();
+        },
+        onEnterBack: () => {
+          videoRef.current.play();
+        },
+        onLeaveBack: () => {
+          videoRef.current.pause();
+        },
       },
-      onComplete: () => {
-        videoRef.current.play();
-      },
+
+      scale: 0.6,
     });
     animateWithGsap("#features_title", { opacity: 1, y: 0 });
     animateWithGsap(
@@ -46,64 +58,64 @@ function Features() {
               Forged in titanium.
             </h2>
           </div>
-          <div className="flex-center flex-col sm:px-10 ">
-            <div className="relative h-[50%] w-full flex items-center">
-              <video
-                playsInline
-                preload="none"
-                muted
-                auto
-                autoPlay
-                ref={videoRef}
-                id="exploreVideo"
-                className="w-full h-full object-cover object-center"
-              >
-                <source src={exploreVideo} type="video/mp4" />
-              </video>
-            </div>
-            <div className="flex flex-col w-full relative">
-              <div className="feature-video-container">
-                <div className="overflow-hidden  flex flex-col md:flex-row h-[50%]">
-                  <div className="box-img flex md:flex-1 overflow-hidden">
-                    <img
-                      src={explore1Img}
-                      alt="titanium"
-                      className="feature-video g_grow"
-                    />
-                  </div>
-                  <div className="box-img flex md:flex-1 overflow-hidden">
-                    <img
-                      src={explore2Img}
-                      alt="titanium2"
-                      className="feature-video g_grow"
-                    />
-                  </div>
+        </div>
+      </div>
+      <div className="flex-center flex-col sm:px-10 ">
+        <div className="relative w-screen h-[90vh] flex items-center">
+          <video
+            playsInline
+            preload="none"
+            muted
+            autoPlay
+            loop
+            ref={videoRef}
+            id="exploreVideo"
+            className="w-full h-full object-cover object-center rounded-3xl"
+          >
+            <source src={exploreVideo} type="video/mp4" />
+          </video>
+        </div>
+        <div className="flex flex-col w-full relative">
+          <div className="screen-max-width">
+            <div className="feature-video-container flex items-center justify-center">
+              <div className="overflow-hidden flex flex-col md:flex-row h-[50%] rounded-3xl">
+                <div className="box-img flex md:flex-1 overflow-hidden ">
+                  <img
+                    src={explore1Img}
+                    alt="titanium"
+                    className="feature-video g_grow "
+                  />
+                </div>
+                <div className="box-img flex md:flex-1 overflow-hidden">
+                  <img
+                    src={explore2Img}
+                    alt="titanium2"
+                    className="feature-video g_grow"
+                  />
                 </div>
               </div>
-              <div className="feature-text-container">
-                <div className="flex-1 flex-center">
-                  <p className="feature-text g_text">
-                    Iphone 15 pro is{" "}
-                    <span className="text-white">
-                      the first iphone to featured an aerospace-grade titanium
-                      design
-                    </span>
-                    , using the same alloy that spacecrafts are made of. The
-                    result is a phone that's stronger, lighter, and more durable
-                    — yet
-                  </p>
-                </div>
-                <div className="flex-1 flex-center">
-                  <p className="feature-text g_text">
-                    Titanium has one of the best strength-to-weight ratios of
-                    any metal, making these our{" "}
-                    <span className="text-white">
-                      Lightest pro models ever.
-                    </span>
-                    You'll notice the difference the moment you pick them up.
-                    yet
-                  </p>
-                </div>
+            </div>
+
+            <div className="feature-text-container">
+              <div className="flex-1 flex-center">
+                <p className="feature-text g_text">
+                  Iphone 15 pro is{" "}
+                  <span className="text-white">
+                    the first iphone to featured an aerospace-grade titanium
+                    design
+                  </span>
+                  , using the same alloy that spacecrafts are made of. The
+                  result is a phone stronger, lighter, and more durable — yet
+                </p>
+              </div>
+              <div className="flex-1 flex-center">
+                <p className="feature-text g_text">
+                  Titanium has one of the best strength-to-weight ratios of any
+                  metal, making these our{" "}
+                  <span className="text-white">Lightest pro models ever.</span>
+                  You will notice the difference the moment you pick them up.
+                  yet
+                </p>
               </div>
             </div>
           </div>
