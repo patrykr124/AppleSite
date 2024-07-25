@@ -12,7 +12,7 @@ function Features() {
         trigger: "#exploreVideo",
         start: "top 30%",
         end: "bottom top",
-        scrub: 1.5,
+        scrub: 0.8,
         onEnter: () => {
           videoRef.current.play();
         },
