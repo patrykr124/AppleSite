@@ -51,7 +51,7 @@ function HowItWorksMacbook() {
               className="bg-transparent relative z-10"
             />
           </div>
-          <div className="hiw-video-macbook z-50">
+          <div className="hiw-video-macbook z-30">
             <video
               className="pointer-events-none"
               playsInline

@@ -19,10 +19,10 @@ function HeroMacbook() {
           <h1 id="hero" className="hero-title-max-macbook pb-10">
             Mind-blowing.<br></br> Head-turning.
           </h1>
-          <div className="md:h-[350px]">
+          <div className="md:h-[350px] w-screen relative">
             <video
               className="pointer-events-none h-full w-full object-cover"
-              autoPlay
+              autoPlayl
               muted
               playsInline={true}
               key={heroVideoMacbook}
