@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import ModelView from "./ModelView";
 import { yellowImg } from "../utils";
 import * as THREE from "three";
@@ -39,12 +39,12 @@ function Model() {
       });
     }
     if (size === "small") {
-      animateWithGsapTimeLine(tl, large, smallRotation, "#view2", "#view1", {
+      animateWithGsapTimeLine(tl, large, largeRotation, "#view2", "#view1", {
         transform: "translateX(0)",
         duration: 2,
       });
     }
-  }, [size]);
+  }, [size, smallRotation, tl, largeRotation]);
 
   useGSAP(() => {
     gsap.to("#heading", {
