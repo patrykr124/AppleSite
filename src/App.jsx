@@ -1,21 +1,32 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Macbook from "./pages/Macbook";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Macbook from "./pages/Macbook";
 import Store from "./pages/Store";
-
+import ProductPage from "./pages/product/ProductPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { OpenBagProvider } from "./context/OpenBagContext";
+import Footer from "./components/Footer.jsx";
+import ThankYouPage from "./pages/ThankYouPage.jsx";
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/macbook" element={<Macbook />} />
-        <Route path="/store" element={<Store />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <OpenBagProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/macbook" element={<Macbook />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products/:id" element={<ProductPage />} />
+          <Route path="/thankyou" element={<ThankYouPage />}/>
+        </Routes>
+        <ToastContainer position="bottom-right" />
+        <Footer/>
+      </Router>
+    </OpenBagProvider>
   );
 }
 

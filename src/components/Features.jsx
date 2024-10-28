@@ -10,7 +10,7 @@ function Features() {
     gsap.to("#exploreVideo", {
       scrollTrigger: {
         trigger: "#exploreVideo",
-        start: "top 30%",
+        start: "top 15%",
         end: "bottom top",
         scrub: 0.8,
         onEnter: () => {
@@ -38,7 +38,7 @@ function Features() {
     animateWithGsap(".g_text", {
       opacity: 1,
       y: 0,
-      ease: "power2.inOut",
+      ease: "power1.out",
       duration: 1,
     });
   }, []);
@@ -78,15 +78,15 @@ function Features() {
         <div className="flex flex-col w-full relative">
           <div className="screen-max-width">
             <div className="feature-video-container flex items-center justify-center">
-              <div className="overflow-hidden flex flex-col md:flex-row h-[50%] rounded-3xl">
-                <div className="box-img flex md:flex-1 overflow-hidden ">
+              <div className="overflow-hidden flex flex-col md:flex-row h-[50%] rounded-3xl gap-6">
+                <div className="box-img flex md:flex-1 overflow-hidden rounded-2xl">
                   <img
                     src={explore1Img}
                     alt="titanium"
                     className="feature-video g_grow "
                   />
                 </div>
-                <div className="box-img flex md:flex-1 overflow-hidden">
+                <div className="box-img flex md:flex-1 overflow-hidden rounded-2xl">
                   <img
                     src={explore2Img}
                     alt="titanium2"

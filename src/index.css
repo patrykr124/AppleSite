@@ -14,12 +14,11 @@ html {
 
 body {
   color: white;
-  width: 100dvw;
   overflow-x: hidden;
   height: 100%;
   background: #000;
   border-color: #3b3b3b;
-  user-select: none;
+
 }
 
 canvas {
@@ -33,6 +32,10 @@ canvas {
   max-width: 1120px;
 }
 
+.wrapper {
+  max-width: 1120px;
+}
+
 @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
@@ -43,7 +46,7 @@ canvas {
   }
 
   .btn {
-    @apply px-5 py-2 rounded-3xl bg-blue my-5 hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
+    @apply px-5 py-2 rounded-3xl bg-blue hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
   }
 
   .color-container {
@@ -61,6 +64,12 @@ canvas {
   .common-padding {
     @apply sm:py-32 py-20 sm:px-10 px-5;
   }
+  .common-padding-bar{
+    @apply  sm:px-10 px-5 ;
+  }
+  .common-padding-short {
+    @apply sm:pt-32 pt-20 sm:px-10 px-5;
+  }
 
   .section-heading {
     @apply text-gray lg:text-6xl md:text-5xl text-3xl lg:mb-0 font-medium opacity-0 translate-y-20;
@@ -70,8 +79,15 @@ canvas {
     @apply text-black lg:text-6xl md:text-5xl text-3xl lg:mb-0 font-medium opacity-0 translate-y-20;
   }
 
+  .section-heading-offanima {
+    @apply text-black lg:text-6xl md:text-5xl text-3xl lg:mb-0 font-medium;
+  }
+
   .feature-text {
     @apply text-gray max-w-md text-lg md:text-xl font-semibold opacity-0 translate-y-[100px];
+  }
+  .feature-text-offanima {
+    @apply text-gray max-w-md text-lg md:text-xl font-semibold;
   }
   .feature-text-macbook {
     @apply text-gray max-w-xl text-lg md:text-xl font-semibold opacity-0 translate-y-[100px];
@@ -100,6 +116,12 @@ canvas {
   .hero-title {
     @apply text-center font-semibold text-3xl text-gray-100 opacity-0 max-md:mb-10;
   }
+  .product-title {
+    @apply text-center font-semibold text-3xl;
+  }
+  .product-title-price {
+    @apply text-center font-semibold;
+  }
   .hero-title-macbook {
     @apply text-center font-semibold text-3xl text-black opacity-0 max-md:mb-10;
   }
@@ -111,14 +133,22 @@ canvas {
     @apply text-4xl md:text-7xl font-semibold text-center;
   }
   .hiw-title-macbook {
-    @apply text-4xl md:text-7xl font-semibold text-center translate-y-[100%];
+    @apply text-4xl md:text-7xl font-semibold text-center opacity-0 translate-y-[100%];
   }
   .hiw-title-macbook-left {
-    @apply text-4xl md:text-7xl font-semibold text-left translate-y-[100%];
+    @apply text-4xl text-black
+    md:text-7xl font-semibold text-left translate-y-[100%] opacity-0;
   }
 
   .hiw-subtitle {
-    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center translate-y-[100%];
+    @apply text-gray font-semibold text-xl md:text-2xl py-10 text-center translate-y-[0%] opacity-0;
+  }
+
+  .hiw-subtitle-offanimation {
+    @apply text-black font-semibold text-xl md:text-2xl py-10 text-center;
+  }
+  .hiw-subtitle-shortoff {
+    @apply text-black font-semibold text-xl md:text-2xl text-center;
   }
 
   .hiw-video {
@@ -135,6 +165,12 @@ canvas {
   .hiw-text {
     @apply text-gray text-xl font-normal md:font-semibold;
   }
+  .hiw-text-small {
+    @apply text-gray text-lg font-normal md:font-semibold;
+  }
+  .hiw-text-small-2 {
+    @apply text-gray text-sm hover:underline;
+  }
 
   .hiw-bigtext {
     @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2;
@@ -150,4 +186,17 @@ canvas {
   .g_fadeIn {
     @apply opacity-0 translate-y-[100px];
   }
+
+  .capacity-container {
+    @apply shadow-md  rounded-full p-6  flex justify-between cursor-pointer hover:bg-slate-50 transition-all;
+  }
+}
+
+.slick-next:before,
+.slick-prev:before {
+  color: black;
+}
+
+.text_semibold_black{
+  @apply text-xl text-black font-semibold
 }

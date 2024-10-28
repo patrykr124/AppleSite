@@ -35,7 +35,7 @@ function Slider() {
             Get the highlights.
           </h1>
         </div>
-        <div className="sliderDiv my-28 flex flex-col justify-center items-center">
+        <div className="sliderDiv mt-28 flex flex-col justify-center items-center">
           <div className="slider relative w-full h-[550px] overflow-hidden flex flex-col justify-center items-center">
             {imagesSlider.map((images, index) => {
               return (

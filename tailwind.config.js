@@ -12,7 +12,13 @@ export default {
           300: "#42424570",
         },
         zinc: "#101010",
+        grey: "#fafafc",
+        greyProduct: "#f6f5f8",
       },
+      scale: {
+        102: "1.02",
+      },
+      
     },
   },
   plugins: [],

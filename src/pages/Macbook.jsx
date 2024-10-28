@@ -1,3 +1,4 @@
+import CollectionsMacbook from "../components/macbook/CollectionsMacbook";
 import FeaturesMacbook from "../components/macbook/FeaturesMacbook";
 import HeroMacbook from "../components/macbook/HeroMacbook";
 import HighlightsMacbook from "../components/macbook/HighlightsMacbook";
@@ -7,18 +8,17 @@ import Tabs from "../components/macbook/Tabs";
 
 function Macbook() {
   return (
-    <>
-      <main className="bg-white">
-        <HeroMacbook />
-      </main>
-      <main className="bg-black">
-        <HighlightsMacbook />
-        <Slider />
-        <FeaturesMacbook />
-        <HowItWorksMacbook />
-        <Tabs />
-      </main>
-    </>
+      <>
+          <main className="">
+              <HeroMacbook/>
+              <HighlightsMacbook/>
+              <Slider/>
+              <FeaturesMacbook/>
+              <HowItWorksMacbook/>
+              <Tabs/>
+              <CollectionsMacbook/>
+          </main>
+      </>
   );
 }
 
