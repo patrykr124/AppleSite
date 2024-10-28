@@ -21,8 +21,8 @@ function HowItWorks() {
     animateWithGsap(".a_text", {
       opacity: 1,
       y: 0,
-      ease: "power2.inOut",
-      duration: 1,
+      ease: "power1.inOut",
+      duration: 0.8,
     });
   }, []);
 

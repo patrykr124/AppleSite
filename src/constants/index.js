@@ -225,3 +225,83 @@ export const footerLinks = [
   "Legal",
   "Site Map",
 ];
+
+////////////////////////////////////////
+
+export const products = [
+  {
+    id: 1,
+    slug: "iphone",
+    title: "Iphone 15 pro",
+    desc: "The best phone in the world",
+    img: "/assets/images/iphone_15_pro.png",
+    price: 999,
+  },
+  {
+    id: 2,
+    slug: "iphone",
+    title: "Iphone 15",
+    desc: "The best phone in the world",
+    img: "/assets/images/iphone_15.png",
+    price: 899,
+  },
+  {
+    id: 3,
+    slug: "iphone",
+    title: "Iphone 14",
+    desc: "The best phone in the world",
+    img: "/assets/images/iphone_14.png",
+    price: 799,
+  },
+  {
+    id: 4,
+    slug: "iphone",
+    title: "Iphone 13",
+    desc: "The best phone in the world",
+    img: "/assets/images/iphone_13.png",
+    price: 699,
+  },
+  {
+    id: 5,
+    slug: "iphone",
+    title: "Iphone SE",
+    desc: "The best phone in the world",
+    img: "/assets/images/iphone_se.png",
+    price: 599,
+  },
+  {
+    id: 6,
+    slug: "macbook",
+    title: "Macbook Pro 13",
+    desc: "The best macbook in the world",
+    img: "/assets/images/macbook_air_13.png",
+    price: 1999,
+  },
+  {
+    id: 7,
+    slug: "macbook",
+    title: "Macbook Pro 14”",
+    desc: "The best macbook in the world",
+    img: "/assets/images/macbook_air_14.png",
+    price: 1799,
+  },
+];
+
+export const category = [
+  {
+    id: 1,
+    title: "Iphone ",
+    slug: "iphone",
+    desc: "The best phone in the world",
+    img: "/assets/images/iphoneStore.jpg",
+    color: "white",
+  },
+  {
+    id: 2,
+    title: "macbook ",
+    slug: "macbook",
+    desc: "The best macbook in the world",
+    img: "/assets/images/macbookStore.jpg",
+    color: "white",
+  },
+];

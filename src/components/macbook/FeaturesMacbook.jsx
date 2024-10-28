@@ -17,7 +17,7 @@ function FeaturesMacbook() {
     <section className="h-full common-padding bg-zinc relative overflow-hidden">
       <div className="screen-max-width">
         <div className="flex flex-col justify-center items-center overflow-hidden">
-          <div className=" mb-24">
+          <div className="mb-24">
             <h2
               id="features_title"
               className="translate-y-[100px] text-5xl lg:text-7xl font-semibold"

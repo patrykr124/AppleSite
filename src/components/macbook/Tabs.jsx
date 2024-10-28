@@ -9,7 +9,7 @@ function Tabs() {
   const [slide, setSlide] = useState(0);
 
   useGSAP(() => {
-    animateWithGsap(".h2anim", {
+    animateWithGsap(".h2anima", {
       opacity: 1,
       y: 0,
     });
@@ -36,7 +36,7 @@ function Tabs() {
     <section className="w-screen overflow-hidden h-full common-padding bg-zinc">
       <div className="screen-max-width flex flex-col gap-12 ">
         <div className="flex flex-col justify-center items-center">
-          <h2 className="hiw-title-macbook h2anim  ">Amps up apps. </h2>
+          <h2 className="hiw-title-macbook h2anima  ">Amps up apps. </h2>
           <p className="hiw-subtitle panim">
             With thousands of apps optimized to unlock the full power of macOS
             and Apple silicon, M3 chips accelerate performance like never
