@@ -37,7 +37,7 @@ function Inch() {
             }`}
           >
             <p>{inch.inch}</p>
-            <p>From {inch.price} PLN</p>
+            <p> {inch.price} zł</p>
           </div>
         ))}
       </div>

@@ -49,6 +49,10 @@ canvas {
     @apply px-5 py-2 rounded-3xl bg-blue hover:bg-transparent border border-transparent hover:border hover:text-blue hover:border-blue;
   }
 
+  .btnStatic{
+    @apply px-5 py-2 rounded-3xl bg-blue ;
+  }
+
   .color-container {
     @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300 backdrop-blur;
   }
@@ -188,7 +192,7 @@ canvas {
   }
 
   .capacity-container {
-    @apply shadow-md  rounded-full p-6  flex justify-between cursor-pointer hover:bg-slate-50 transition-all;
+    @apply shadow-md border  rounded-full p-6  flex justify-between cursor-pointer;
   }
 }
 

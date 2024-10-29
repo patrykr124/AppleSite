@@ -6,7 +6,7 @@ import useCartStore from "../context/cart";
 
 
 function ItemBag() {
-    const {cartItems, updateQuantity, removeItem} = useCartStore();
+    const {cartItems, updateQuantity, removeItem, priceSelected} = useCartStore();
     const {handleOpen} = useOpenBag();
     const navigate = useNavigate();
 
@@ -32,7 +32,7 @@ function ItemBag() {
     }
 
     const totalPrice = cartItems.reduce(
-        (total, items) => total + items.price * items.quantity,
+        (total, items) => total + priceSelected * items.quantity,
         0
     );
 
@@ -49,7 +49,7 @@ function ItemBag() {
                     items: cartItems.map((item) => ({
                         id: item.id,
                         quantity: item.quantity,
-                        price: item.price,
+                        price: priceSelected,
                         title: item.title,
                         img: item.img,
                     }))
@@ -75,7 +75,7 @@ function ItemBag() {
                 <div className="box gap-10 flex flex-col">
                     {cartItems.length > 0 ? (
                         cartItems.map((item) => (
-                            <div key={item.id} className="  ">
+                            <div key={item.id}>
                                 <div className="flex gap-12">
                                     <a
                                         onClick={() => handleProductClick(item.id)}
@@ -92,7 +92,7 @@ function ItemBag() {
                                         <div className="info ">
                                             <p className="title font-bold">{item.title}</p>
                                             <p className="desc">{item.desc}</p>
-                                            <p className="price font-medium">${item.price}</p>
+                                            <p className="price font-medium">{priceSelected} zł</p>
                                         </div>
                                     </a>
                                     <div className="quantity flex gap-2 items-center justify-center">
