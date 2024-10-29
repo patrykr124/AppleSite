@@ -2,6 +2,7 @@ import { create } from "zustand";
 
 const useCartStore = create((set, get) => ({
   cartItems: [],
+  priceSelected: 0,
 
   addItemToCart: (item) => {
     const itemExist = get().cartItems.find((cart) => cart.id === item.id);
@@ -26,6 +27,7 @@ const useCartStore = create((set, get) => ({
   removeItem: (id) => {
     set({ cartItems: get().cartItems.filter((cart) => cart.id !== id) });
   },
+  setPriceSelected: (price) => set({ priceSelected: price }),
 }));
 
 export default useCartStore;
