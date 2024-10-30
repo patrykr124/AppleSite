@@ -14,7 +14,7 @@ function AllProductsStore() {
 
     return (
         <div className="screen-max-width">
-            <div className="box flex flex-wrap lg:gap-6 gap-0">
+            <div className="box flex items-center md:justify-start justify-center flex-wrap lg:gap-6 gap-10">
                 {filteredProducts.map((product) => (
                     <CartProduct
                         key={product.id}

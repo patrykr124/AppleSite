@@ -28,7 +28,7 @@ function Store() {
                     <Filters/>
                 </div>
             </div>
-            <div className="productsBox py-10">
+            <div className="productsBox py-10 common-padding-shortNoTop">
                 <AllProductsStore />
             </div>
         </section>

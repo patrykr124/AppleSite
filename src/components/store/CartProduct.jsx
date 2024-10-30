@@ -14,14 +14,14 @@ function CartProduct({href, product}) {
     }
 
     return (
-        <div className="bg-white flex flex-col justify-center items-center rounded-2xl cursor-pointer ">
+        <div className="bg-white max-w-[150px] md:max-w-[250px] flex flex-col justify-center items-center rounded-2xl cursor-pointer ">
             <a href={href}>
                 <div
                     key={product.id}
-                    className="box flex rounded-2xl flex-col gap-4 w-full md:w-[350px] px-10  md:p-4"
+                    className="box flex rounded-2xl flex-col gap-4 md:w-[350px] px-10  md:p-4"
                 >
                     <div className="img items-center flex justify-center overflow-hidden">
-                        <img className="h-[180px] object-contain mt-6" src={product.img}/>
+                        <img className="h-[200px] max-w-[250px] object-contain mt-6" src={product.img}/>
                     </div>
                     <div className="switchs flex justify-center items-center gap-2">
                         <div className="bg-gray-100 w-3 h-3 rounded-full"></div>
@@ -33,7 +33,7 @@ function CartProduct({href, product}) {
                         <div className="title ">
                             <p className="product-title text-black">{product.title}</p>
                         </div>
-                        <div className="desc text-black">
+                        <div className="desc text-black text-center">
                             <p>{product.desc}</p>
                         </div>
                         <div className="price ">
@@ -44,7 +44,7 @@ function CartProduct({href, product}) {
                     </div>
                 </div>
             </a>
-            <div className="button flex justify-center items-center gap-8 p-6">
+            <div className="button flex flex-col  justify-center items-center md:gap-8 gap-4 md:p-6 py-6">
                 <a href={href}>
                     <button className="btn">Learn more</button>
                 </a>

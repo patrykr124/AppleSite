@@ -32,6 +32,26 @@ function Contact() {
                         ">Billing and subscriptions</p>
                     </div>
                 </div>
+
+
+
+                {/*FORM*/}
+                <form className="flex flex-col gap-2 text-black">
+                    <div className="flex flex-col gap-5">
+                        <label htmlFor="name">Name</label>
+                        <input type="text" id="name" className="shadow-sm border p-2 rounded-xl"/>
+                    </div>
+                    <div className="flex flex-col gap-5">
+                        <label htmlFor="email">E-mail</label>
+                        <input type="text" id="email" className="shadow-sm border p-2 rounded-xl"/>
+                    </div>
+                    <div className="flex flex-col gap-5">
+                        <label htmlFor="textarea">E-mail</label>
+                        <textarea id="textarea" className="shadow-sm border p-2 rounded-xl"/>
+                    </div>
+                </form>
+
+
             </div>
         </div>
     )
