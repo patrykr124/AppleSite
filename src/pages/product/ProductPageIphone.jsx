@@ -5,10 +5,12 @@ import ProductsSlick from "../../components/ProductsSlick";
 import Capacity from "../../components/store/Capacity";
 import Package from "../../components/store/Package";
 import useFetchProductID from "../../context/products";
+import useCartStore from "../../context/cart.js";
 
 function ProductPageIphone() {
     const fetchProduct = useFetchProductID((state) => state.fetchProduct);
     const product = useFetchProductID((state) => state.product);
+    const {priceSelected} = useCartStore();
     const [selected, setSelected] = useState(0);
     const {id} = useParams();
 
@@ -26,7 +28,7 @@ function ProductPageIphone() {
                             <h1 className="section-heading-offanima">{product.title}</h1>
                             <p className="text-black">{product.desc}</p>
                             <p className="text-black/60 mb-10 font-semibold ">
-                                {product.price} zł
+                                {priceSelected} zł
                             </p>
                         </div>
                     )}
