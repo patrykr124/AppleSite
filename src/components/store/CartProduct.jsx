@@ -18,10 +18,10 @@ function CartProduct({href, product}) {
             <a href={href}>
                 <div
                     key={product.id}
-                    className="box flex rounded-2xl flex-col gap-4 md:w-[350px] px-10  md:p-4"
+                    className="box flex rounded-2xl flex-col gap-4 md:w-[350px] lg:px-10  md:p-4"
                 >
                     <div className="img items-center flex justify-center overflow-hidden">
-                        <img className="h-[200px] max-w-[250px] object-contain mt-6" src={product.img}/>
+                        <img className="h-[200px] max-w-[200px] lg:max-w-[250px] object-contain mt-6" src={product.img}/>
                     </div>
                     <div className="switchs flex justify-center items-center gap-2">
                         <div className="bg-gray-100 w-3 h-3 rounded-full"></div>

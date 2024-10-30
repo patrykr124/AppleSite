@@ -15,7 +15,7 @@ function Filters() {
 
     return (
         <div className="screen-max-width py-8 flex flex-col md:flex-row gap-10">
-            <div className="boxFilter flex  gap-2 ">
+            <div className="boxFilter flex md:flex-row flex-col  gap-2 ">
                 <p className=" text-black text-xl">Sort by price:</p>
                 <select
                     className=" text-black bg-gray-200/20 rounded-lg px-4"
@@ -28,10 +28,10 @@ function Filters() {
                     <option value="desc">Descending</option>
                 </select>
             </div>
-            <div className="boxFilter flex gap-2">
+            <div className="boxFilter flex gap-2 md:flex-row flex-col ">
                 <p className=" text-black text-xl">Sort by type of products</p>
                 <select
-                    className=" text-black bg-gray-200/20 rounded-lg px-4"
+                    className=" text-black bg-gray-200/20 rounded-lg px-6 "
                     name="type"
                     id="type"
                     value={filters.typeFilter || ""}
