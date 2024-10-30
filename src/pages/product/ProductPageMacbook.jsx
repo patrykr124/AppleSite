@@ -1,26 +1,20 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import PackageMacbook from "../../components/store/PackageMacbook";
-import InchMacbook from "../../components/store/InchMacbook";
 import CapacityMacbook from "../../components/store/CapacityMacbook";
 import ProductsSlickMacbook from "../../components/macbook/ProductsSlickMacbook";
 import BarAction from "../../components/BarAction.jsx";
+import useFetchProductID from "../../context/products.js";
 
 function ProductPageMacbook() {
-    const [product, setProduct] = useState();
+    const fetchProduct = useFetchProductID((state) => state.fetchProduct);
+    const product = useFetchProductID((state) => state.product);
     const {id} = useParams();
+    const [selected, setSelected] = useState(0);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then((data) => setProduct(data))
-            .catch((err) => console.error("Błąd podczas pobierania produktu:", err));
-    }, [id]);
+        fetchProduct(id);
+    }, [id, fetchProduct]);
 
 
     return (
@@ -46,8 +40,7 @@ function ProductPageMacbook() {
                             />
                         </div>
                         <div className="right flex-1 flex flex-col text-black gap-10">
-                            <CapacityMacbook/>
-                            <InchMacbook/>
+                            <CapacityMacbook setSelected={setSelected} selected={selected} product={product}/>
                         </div>
                     </div>
                     <PackageMacbook/>
@@ -64,7 +57,7 @@ function ProductPageMacbook() {
                 </div>
 
             </section>
-            <BarAction product={product}>{product?.title}</BarAction>
+            <BarAction selected={selected} product={product}>{product?.title}</BarAction>
         </>
     );
 }

@@ -14,7 +14,7 @@ function CartProduct({href, product}) {
     }
 
     return (
-        <div className="bg-white rounded-2xl cursor-pointer ">
+        <div className="bg-white flex flex-col justify-center items-center rounded-2xl cursor-pointer ">
             <a href={href}>
                 <div
                     key={product.id}

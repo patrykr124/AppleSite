@@ -3,7 +3,6 @@ import {useParams} from "react-router-dom";
 import BarAction from "../../components/BarAction";
 import ProductsSlick from "../../components/ProductsSlick";
 import Capacity from "../../components/store/Capacity";
-import Inch from "../../components/store/Inch";
 import Package from "../../components/store/Package";
 import useFetchProductID from "../../context/products";
 
@@ -26,7 +25,7 @@ function ProductPageIphone() {
                         <div className="flex flex-[3] flex-col gap-4">
                             <h1 className="section-heading-offanima">{product.title}</h1>
                             <p className="text-black">{product.desc}</p>
-                            <p className="text-black text-3xl mb-10 font-semibold ">
+                            <p className="text-black/60 mb-10 font-semibold ">
                                 {product.price} zł
                             </p>
                         </div>
@@ -43,7 +42,7 @@ function ProductPageIphone() {
                         </div>
                         <div className="right flex-1 flex flex-col text-black gap-10">
                             <Capacity setSelected={setSelected} selected={selected} product={product}/>
-                            <Inch/>
+
                         </div>
                     </div>
                     <Package/>
