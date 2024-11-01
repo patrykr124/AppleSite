@@ -18,10 +18,12 @@ function ProductPageIphone() {
         fetchProduct(id);
     }, [id, fetchProduct]);
 
+    console.log(product);
+
 
     return (
         <>
-            <section className="w-screen h-full common-padding bg-white">
+            <section className="w-screen  h-full common-padding bg-white">
                 <div className="screen-max-width">
                     {product && (
                         <div className="flex flex-[3] flex-col gap-4">

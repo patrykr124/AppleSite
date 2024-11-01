@@ -32,7 +32,7 @@ function Store() {
                         </h1>
                     </div>
                 </div>
-                <div className="filtersbox hidden sm:block sm:w-fit">
+                <div className="filtersbox hidden sm:block ">
                     <Filters/>
                 </div>
                 <div onClick={handleOpenFilters} className="filtersbox sm:hidden flex justify-end cursor-pointer">

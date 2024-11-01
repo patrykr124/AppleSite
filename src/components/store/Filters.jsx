@@ -14,7 +14,7 @@ function Filters() {
     };
 
     return (
-        <div className="screen-max-width py-8 flex flex-col md:flex-row gap-10">
+        <div className="screen-max-width lg:py-8 flex flex-col md:flex-row lg:gap-10 gap-6">
             <div className="boxFilter flex md:flex-row flex-col  gap-2 ">
                 <p className=" text-black text-xl">Sort by price:</p>
                 <select

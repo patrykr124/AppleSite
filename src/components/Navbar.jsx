@@ -1,6 +1,6 @@
 import {appleImg, bagImg} from "../utils";
 import {navLists} from "../constants";
-import {Link} from "react-router-dom";
+import {Link, NavLink, useParams} from "react-router-dom";
 import {useRef, useState} from "react";
 import Bag from "./Bag";
 import {useClientOutside} from "../hooks/useClickOutside";
@@ -9,11 +9,14 @@ import useCartStore from "../context/cart.js";
 import MobileMenu from "./MobileMenu.jsx";
 
 function Navbar() {
+    const params = useParams()
     const {cartItems} = useCartStore();
     const [openMenu, setOpenMenu] = useState(false);
     const {handleOpen, open} = useOpenBag();
     const bgRef = useRef();
     const imgRef = useRef();
+
+    console.log(params)
 
 
     const handleOpenMenu = () => {
@@ -38,13 +41,15 @@ function Navbar() {
                     </a>
 
                     <div className="flex flex-1 justify-center max-sm:hidden">
-                        {navLists.map((nav) => (<Link
+                        {navLists.map((nav) => (<NavLink
                             key={nav.id}
                             to={nav.path}
-                            className="px-5 text-sm cursor-pointer text-gray hover:text-white transition-all"
+                            className={({ isActive }) =>
+                                `px-5 text-sm cursor-pointer text-gray hover:text-white transition-all ${isActive ? 'text-white' : ''}`
+                            }
                         >
                             {nav.name}
-                        </Link>))}
+                        </NavLink>))}
                     </div>
 
                     <div className="flex items-baseline gap-6 max-sm:justify-end max-sm:flex-1">

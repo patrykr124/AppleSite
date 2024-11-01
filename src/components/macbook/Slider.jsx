@@ -42,7 +42,7 @@ function Slider() {
               return (
                 <div
                   key={index}
-                  className="absolute top-0 bottom-0 flex flex-col justify-between"
+                  className="absolute top-0 bottom-0 flex flex-col justify-around"
                 >
                   <img
                     src={images.path}
@@ -52,7 +52,7 @@ function Slider() {
                     }`}
                   />
                   <p
-                    className={`font-normal text-black mt-10 lg:mt-20 transition-all duration-200 text-center  text-md flex justify-center  ${
+                    className={`font-normal text-black  transition-all duration-200 text-center  text-md flex justify-center  ${
                       index === currentImage ? "opacity-100" : "opacity-0 "
                     }`}
                   >
