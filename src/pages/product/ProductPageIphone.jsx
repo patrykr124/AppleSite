@@ -18,7 +18,7 @@ function ProductPageIphone() {
         fetchProduct(id);
     }, [id, fetchProduct]);
 
-    console.log(product);
+
 
 
     return (

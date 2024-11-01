@@ -9,14 +9,11 @@ import useCartStore from "../context/cart.js";
 import MobileMenu from "./MobileMenu.jsx";
 
 function Navbar() {
-    const params = useParams()
     const {cartItems} = useCartStore();
     const [openMenu, setOpenMenu] = useState(false);
     const {handleOpen, open} = useOpenBag();
     const bgRef = useRef();
     const imgRef = useRef();
-
-    console.log(params)
 
 
     const handleOpenMenu = () => {

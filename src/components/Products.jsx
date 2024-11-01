@@ -1,4 +1,4 @@
-import  {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import CartProduct from "./store/CartProduct";
 
 function Products() {
@@ -12,7 +12,7 @@ function Products() {
             })
             .catch((err) => console.error("Błąd podczas pobierania produktów:", err));
     }, []);
-    console.log(products);
+
 
     return (
         <div className="flex justify-center ">
