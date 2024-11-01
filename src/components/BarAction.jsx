@@ -1,10 +1,10 @@
 import {toast} from "react-toastify";
 import useCartStore from "../context/cart";
 import ButtonBuy from "./UI/ButtonBuy";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 
 export default function BarAction({children, product, selected}) {
-    const {addItemToCart,setPriceSelected,priceSelected} = useCartStore();
+    const {addItemToCart, setPriceSelected, priceSelected} = useCartStore();
 
     function handleAddToCart() {
         addItemToCart(product);
@@ -12,11 +12,10 @@ export default function BarAction({children, product, selected}) {
     }
 
 
-
     useEffect(() => {
 
-        if (product &&  product.options?.length && product.options[selected]) {
-            const additional = Number(product?.options[selected].additionalPrice ) || 0;
+        if (product && product.options?.length && product.options[selected]) {
+            const additional = Number(product?.options[selected].additionalPrice) || 0;
             const price = Number(product?.price);
             setPriceSelected(additional + price);
         } else {
@@ -24,8 +23,6 @@ export default function BarAction({children, product, selected}) {
             setPriceSelected(price);
         }
     }, [selected, product, setPriceSelected]);
-
-
 
 
     return (

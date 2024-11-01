@@ -50,7 +50,7 @@ export const useProductStore = create((set, get) => ({
 
     if (filters.typeFilter && filters.typeFilter !== "all") {
       filtered = filtered.filter(
-        (product) => product.catSlug === filters.typeFilter
+        (product) => product.slug === filters.typeFilter
       )
     }
     if (filters.priceFilter) {

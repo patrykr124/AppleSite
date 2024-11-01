@@ -20,7 +20,7 @@ function Capacity({product, setSelected, selected}) {
                         }`}
                     >
                         <p>{capacity?.title}</p>
-                        <p>{capacity?.additionalPrice} zł</p>
+                        <p>+ {capacity?.additionalPrice} zł</p>
                     </div>
                 ))}
             </div>

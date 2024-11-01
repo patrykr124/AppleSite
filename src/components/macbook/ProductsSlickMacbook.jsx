@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import {settingsProductMacbook} from "../../utils/slick";
 import CartProduct from "../store/CartProduct";
+
 
 function ProductsSlickMacbook() {
     const [products, setProducts] = useState([]);
@@ -28,6 +29,7 @@ function ProductsSlickMacbook() {
                     </div>
                 ))}
             </Slider>
+
         </div>
     );
 }

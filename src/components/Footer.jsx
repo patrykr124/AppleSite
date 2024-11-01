@@ -13,14 +13,14 @@ function Footer() {
 
 
     return (
-        <div className="bg-white common-padding-bar h-full w-full  text-black border-t-[0.5px] border-gray-400/20">
+        <div className="bg-white common-padding-bar h-full w-full  text-black border-t-[0.5px] border-gray-400/20 ">
             <div className="screen-max-width flex w-full py-4 gap-12">
                 <div className="flex flex-col gap-1">
                     <p className="text_semibold_black ">Iphone</p>
                     <ul className="flex flex-col gap-1">
                         {productsIphone.map((product) => (
 
-                            <li key={product.id}><a className="hiw-text-small-2"
+                            <li key={product.id}><a className="hiw-text-small-2 "
                                                     href={`/products/${product.id}`}>{product.title}</a></li>
                         ))}
 

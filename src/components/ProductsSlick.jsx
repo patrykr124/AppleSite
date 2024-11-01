@@ -24,7 +24,9 @@ function ProductsSlick() {
       <Slider {...settings}>
         {products.map((product) => (
           <div key={product.id} className="">
+              <div className="flex justify-center">
             <CartProduct href={`/products/${product.id}`} product={product} />
+              </div>
           </div>
         ))}
       </Slider>

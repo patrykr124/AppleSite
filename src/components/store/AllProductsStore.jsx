@@ -12,9 +12,10 @@ function AllProductsStore() {
         fetchProducts();
     }, []);
 
+
     return (
-        <div className="screen-max-width">
-            <div className="box flex flex-wrap lg:gap-6 gap-0">
+        <div className="screen-max-width ">
+            <div className="box flex items-center md:justify-start justify-around flex-wrap lg:gap-6 sm:gap-10 gap-20">
                 {filteredProducts.map((product) => (
                     <CartProduct
                         key={product.id}
