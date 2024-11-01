@@ -29,6 +29,7 @@ function ProductsSlickMacbook() {
                     </div>
                 ))}
             </Slider>
+
         </div>
     );
 }

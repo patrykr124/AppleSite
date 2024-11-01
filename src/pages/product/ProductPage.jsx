@@ -23,7 +23,7 @@ function ProductPage() {
 
   return (
     <>
-      {product?.catSlug === "macbook" ? (
+      {product?.slug === "macbook" ? (
         <ProductPageMacbook />
       ) : (
         <ProductPageIphone />
