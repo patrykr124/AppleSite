@@ -44,7 +44,7 @@ function CartProduct({href, product}) {
                     </div>
                 </div>
             </a>
-            <div className="button flex flex-col  justify-center items-center md:gap-8 gap-4 md:p-6 py-6">
+            <div className="button flex flex-col lg:flex-row  justify-center items-center md:gap-8 gap-4 p-2">
                 <a href={href}>
                     <button className="btn">Learn more</button>
                 </a>

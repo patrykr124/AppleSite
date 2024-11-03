@@ -70,7 +70,6 @@ function ItemBag() {
         }
     }
 
-console.log(cartItems);
 
     return (
         <div className="flex flex-col relative">
