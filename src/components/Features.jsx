@@ -3,8 +3,10 @@ import { useRef } from "react";
 import { animateWithGsap } from "../utils/animations";
 import { explore1Img, explore2Img, exploreVideo } from "../utils";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 function Features() {
+  gsap.registerPlugin(ScrollTrigger);
   const videoRef = useRef();
   useGSAP(() => {
     gsap.to("#exploreVideo", {
@@ -29,7 +31,9 @@ function Features() {
 
       scale: 0.6,
     });
-    animateWithGsap("#features_title", { opacity: 1, y: 0 });
+    animateWithGsap("#features_title", { opacity: 1, y: 0, delay: 0 });
+    animateWithGsap(".animateText", { opacity: 1, y: 0,delay:0.2 });
+    animateWithGsap(".animateTextSecond", { opacity: 1, y: 0,delay:0.4 });
     animateWithGsap(
       ".g_grow",
       { scale: 1.1, opacity: 1, ease: "power1.out" },
@@ -53,8 +57,8 @@ function Features() {
         </div>
         <div className="flex flex-col justify-center items-center overflow-hidden">
           <div className="mt-32 mb-24 pl-24">
-            <h2 className="text-5xl lg:text-7xl font-semibold">Iphone.</h2>
-            <h2 className="text-5xl lg:text-7xl font-semibold">
+            <h2 className="text-5xl lg:text-7xl font-semibold animateText">Iphone.</h2>
+            <h2 className="text-5xl lg:text-7xl font-semibold animateTextSecond">
               Forged in titanium.
             </h2>
           </div>
