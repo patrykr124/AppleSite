@@ -35,23 +35,24 @@ function Slider() {
             Get the highlights.
           </h1>
         </div>
-        <div className="sliderDiv mt-28 flex flex-col justify-center items-center">
-          <div className="slider relative w-full h-[550px] overflow-hidden flex flex-col justify-center items-center">
+        <div className="sliderDiv lg:mt-28 flex flex-col justify-center items-center">
+          <div className="slider relative w-full h-[300px] lg:h-[500px] overflow-hidden flex flex-col justify-center items-center">
+
             {imagesSlider.map((images, index) => {
               return (
                 <div
                   key={index}
-                  className="absolute top-0 bottom-0 flex flex-col justify-between"
+                  className="absolute top-0 bottom-0 flex flex-col justify-around"
                 >
                   <img
                     src={images.path}
                     alt="slider"
-                    className={`sliderImg transition-opacity w-full h-full object-cover duration-700 ease-in-out  ${
+                    className={`sliderImg transition-opacity w-full object-contain  duration-700 ease-in-out  ${
                       index === currentImage ? "opacity-100" : "opacity-0"
                     }`}
                   />
                   <p
-                    className={`font-normal text-black mt-20  text-md flex justify-center ${
+                    className={`font-normal text-black  transition-all duration-200 text-center  text-md flex justify-center  ${
                       index === currentImage ? "opacity-100" : "opacity-0 "
                     }`}
                   >
@@ -62,7 +63,7 @@ function Slider() {
             })}
           </div>
 
-          <div className="flex w-fit p-1 rounded-full justify-center items-center bg-neutral-200/60 shadow-inner mt-4">
+          <div className="flex w-fit p-1 rounded-full justify-center items-center bg-neutral-200/60 shadow-inner mt-8">
             <div className="buttons flex justify-center items-center">
               <button
                 onClick={prevImage}

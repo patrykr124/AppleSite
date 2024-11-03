@@ -6,9 +6,11 @@ import useCartStore from "../context/cart";
 
 
 function ItemBag() {
-    const {cartItems, updateQuantity, removeItem, priceSelected} = useCartStore();
+    const {cartItems, updateQuantity, removeItem} = useCartStore();
     const {handleOpen} = useOpenBag();
     const navigate = useNavigate();
+
+
 
     function handleProductClick(id) {
         navigate(`/products/${id}`);
@@ -32,9 +34,10 @@ function ItemBag() {
     }
 
     const totalPrice = cartItems.reduce(
-        (total, items) => total + priceSelected * items.quantity,
+        (total, items) => total + items.price * items.quantity,
         0
     );
+
 
     //stripe
 
@@ -49,7 +52,7 @@ function ItemBag() {
                     items: cartItems.map((item) => ({
                         id: item.id,
                         quantity: item.quantity,
-                        price: priceSelected,
+                        price: item.price,
                         title: item.title,
                         img: item.img,
                     }))
@@ -66,7 +69,6 @@ function ItemBag() {
             console.error("Błąd:", error);
         }
     }
-
 
 
     return (
@@ -92,7 +94,7 @@ function ItemBag() {
                                         <div className="info ">
                                             <p className="title font-bold">{item.title}</p>
                                             <p className="desc">{item.desc}</p>
-                                            <p className="price font-medium">{priceSelected} zł</p>
+                                            <p className="price">{item.price} zł</p>
                                         </div>
                                     </a>
                                     <div className="quantity flex gap-2 items-center justify-center">
@@ -134,7 +136,7 @@ function ItemBag() {
                     </div>
                     <div className="flex justify-center items-center gap-4">
                         <p className="text-black hiw-text-small">
-                            <span className="text-black ">Total:</span> {totalPrice} zł
+                            <span className="text-black ">Total: {totalPrice} zł</span>
                         </p>
                     </div>
                 </div>
