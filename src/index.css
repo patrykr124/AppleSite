@@ -269,9 +269,11 @@ canvas {
 @media (max-width: 640px) {
     .slick-prev  {
         padding: 0 0 0 20px;
+        z-index: 999;
     }
 
     .slick-next {
         padding: 0 30px 0 0;
+        z-index: 999;
     }
 }

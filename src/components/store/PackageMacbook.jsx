@@ -12,17 +12,12 @@ function PackageMacbook() {
           Apple's environmental credentials.
         </h4>
         <p className="hiw-text-small text-center">
-          To help us achieve carbon neutrality by 2030, iPhone 15 Pro and iPhone
-          15 Pro Max are sold without a power adapter or EarPods. In the box,
-          you'll find a fast-charging USB-C cable that's compatible with USB-C
-          power adapters and computer ports. We encourage you to use any
-          compatible USB-C power adapter. If you need a new power adapter or new
-          Apple headphones, you can purchase them.
+          To help us achieve carbon neutrality by 2030, the MacBook is sold with a power adapter included. In the box, you’ll find a fast-charging USB-C cable that’s compatible with USB-C power adapters and computer ports. We encourage you to use any compatible USB-C power adapter. If you need an additional power adapter or Apple headphones, you can purchase them separately.
         </p>
       </div>
       <div className="add mt-10 gap-10 flex flex-col justify-center items-center">
         <h3 className="text-black product-title max-w-sm">
-          Your new iPhone. And so much more.
+          Your new Macbook. And so much more.
         </h3>
         <div className="grid grid-cols-4 gap-4">
           <div className="box col-start-2 items-center flex flex-col gap-4">

@@ -49,7 +49,7 @@ function ProductPageMacbook() {
                     <div className="allProducts mt-20 ">
                         <div className="flex justify-center">
                             <h3 className="text-black product-title max-w-sm">
-                                Your new iPhone. And so much more.
+                                Your new Macbook. And so much more.
                             </h3>
                         </div>
                         <div className="mt-10">
