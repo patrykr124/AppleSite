@@ -1,6 +1,6 @@
 import {appleImg, bagImg} from "../utils";
 import {navLists} from "../constants";
-import {Link, NavLink, useParams} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import {useRef, useState} from "react";
 import Bag from "./Bag";
 import {useClientOutside} from "../hooks/useClickOutside";
@@ -21,7 +21,7 @@ function Navbar() {
         if (!openMenu) handleOpen(false);
     }
 
-    const handleOpenBag= () => {
+    const handleOpenBag = () => {
         handleOpen(!open);
         if (!open) setOpenMenu(false);
     }
@@ -41,7 +41,7 @@ function Navbar() {
                         {navLists.map((nav) => (<NavLink
                             key={nav.id}
                             to={nav.path}
-                            className={({ isActive }) =>
+                            className={({isActive}) =>
                                 `px-5 text-sm cursor-pointer text-gray hover:text-white transition-all ${isActive ? 'text-white' : ''}`
                             }
                         >
