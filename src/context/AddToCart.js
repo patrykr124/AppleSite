@@ -10,7 +10,7 @@ export const useProductStore = create((set, get) => ({
 
   fetchProducts: async () => {
     try {
-      const response = await fetch(`${process.env.REACT_APP_SERVER_URL}/products`);
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/products`);
       const data = await response.json();
       set({ products: data });
       get().applyFilters();

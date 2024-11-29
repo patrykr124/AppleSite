@@ -6,7 +6,7 @@ function ProductsMacbook() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_SERVER_URL}/products/macbook`)
+    fetch(`${import.meta.env.VITE_SERVER_URL}/products/macbook`)
       .then((response) => {
         return response.json();
       })
