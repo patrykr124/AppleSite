@@ -6,9 +6,10 @@ import useCartStore from "../context/cart";
 
 
 function ItemBag() {
-    const {cartItems, updateQuantity, removeItem} = useCartStore();
+    const {cartItems, updateQuantity, removeItem,priceSelected} = useCartStore();
     const {handleOpen} = useOpenBag();
     const navigate = useNavigate();
+
 
 
 
@@ -34,7 +35,7 @@ function ItemBag() {
     }
 
     const totalPrice = cartItems.reduce(
-        (total, items) => total + items.price * items.quantity,
+        (total, items) => total + priceSelected * items.quantity,
         0
     );
 
@@ -52,7 +53,7 @@ function ItemBag() {
                     items: cartItems.map((item) => ({
                         id: item.id,
                         quantity: item.quantity,
-                        price: item.price,
+                        price: priceSelected,
                         title: item.title,
                         img: item.img,
                     }))

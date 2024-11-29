@@ -10,6 +10,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { OpenBagProvider } from "./context/OpenBagContext";
 import Footer from "./components/Footer.jsx";
 import ThankYouPage from "./pages/ThankYouPage.jsx";
+import ThankYouPageForm from "./pages/ThankYouPageForm.jsx";
 function App() {
   return (
     <OpenBagProvider>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<ProductPage />} />
           <Route path="/thankyou" element={<ThankYouPage />}/>
+          <Route path="/ThankYouPageForm" element={<ThankYouPageForm />}/>
         </Routes>
         <ToastContainer position="bottom-right" />
         <Footer/>

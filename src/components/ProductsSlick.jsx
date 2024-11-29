@@ -9,7 +9,7 @@ function ProductsSlick() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/products/iphone")
+    fetch("process.env.REACT_APP_SERVER_URL/products/iphone")
       .then((response) => {
         return response.json();
       })
