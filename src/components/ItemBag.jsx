@@ -9,7 +9,7 @@ function ItemBag() {
     const {cartItems, updateQuantity, removeItem,priceSelected} = useCartStore();
     const {handleOpen} = useOpenBag();
     const navigate = useNavigate();
-    console.log(priceSelected)
+
 
 
 
