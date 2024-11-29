@@ -9,7 +9,7 @@ function ItemBag() {
     const {cartItems, updateQuantity, removeItem,priceSelected} = useCartStore();
     const {handleOpen} = useOpenBag();
     const navigate = useNavigate();
-
+    console.log(priceSelected)
 
 
 
@@ -38,6 +38,7 @@ function ItemBag() {
         (total, items) => total + priceSelected * items.quantity,
         0
     );
+
 
 
     //stripe

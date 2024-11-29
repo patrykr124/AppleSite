@@ -15,7 +15,7 @@ function ProductPageIphone() {
     const {id} = useParams();
 
     useEffect(() => {
-        fetchProduct(id);
+        fetchProduct(id).then(r => r.json());
     }, [id, fetchProduct]);
 
 

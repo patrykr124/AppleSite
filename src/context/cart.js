@@ -14,7 +14,9 @@ const useCartStore = create((set, get) => ({
         ),
       });
     } else {
-      set({ cartItems: [...get().cartItems, { ...item, quantity: 1 }] });
+      set({ cartItems: [...get().cartItems, { ...item, quantity: 1 }],
+      priceSelected: item.price
+      });
     }
   },
   updateQuantity: (id, quantity) => {
