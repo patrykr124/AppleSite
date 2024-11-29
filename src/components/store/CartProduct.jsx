@@ -8,10 +8,10 @@ import useCartStore from "../../context/cart";
 
 function CartProduct({href, product}) {
     const {addItemToCart} = useCartStore();
-
     function addToCart() {
         addItemToCart(product);
         toast("✨ Product add to cart ");
+
     }
 
     return (
@@ -23,7 +23,7 @@ function CartProduct({href, product}) {
                     className="box flex rounded-2xl flex-col gap-4 md:w-[350px] lg:px-10  md:p-4"
                 >
                     <div className="img items-center flex justify-center overflow-hidden">
-                        <img className="h-[200px] max-w-[200px] lg:max-w-[250px] object-contain mt-6"
+                        <img alt="productImg" className="h-[200px] max-w-[200px] lg:max-w-[250px] object-contain mt-6"
                              src={product.img}/>
                     </div>
                     <div className="switchs flex justify-center items-center gap-2">

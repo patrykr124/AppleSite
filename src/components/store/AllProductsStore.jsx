@@ -10,7 +10,7 @@ function AllProductsStore() {
 
     useEffect(() => {
         fetchProducts();
-    }, []);
+    }, );
 
 
     return (
