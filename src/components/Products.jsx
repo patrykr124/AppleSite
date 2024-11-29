@@ -15,7 +15,7 @@ function Products() {
 
 
     return (
-        <div className="flex justify-center ">
+        <div className="flex justify-center flex-wrap gap-6">
             {products.map((product) => (
                 <CartProduct
                     key={product.id}
