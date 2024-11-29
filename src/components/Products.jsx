@@ -5,7 +5,7 @@ function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_SERVER_URL}/products/iphone`)
+        fetch(`${import.meta.env.VITE_SERVER_URL}/products/iphone`)
             .then((response) => response.json())
             .then((data) => {
                 setProducts(data);
