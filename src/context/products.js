@@ -5,7 +5,7 @@ const useFetchProductID = create((set) => ({
   fetchProduct: async (id) => {
    
     try {
-      const response = await fetch(`http://localhost:5000/products/${id}`);
+      const response = await fetch(`process.env.REACT_APP_SERVER_URL/products/${id}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

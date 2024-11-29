@@ -6,8 +6,8 @@ function Footer() {
 
     useEffect(() => {
         Promise.all([
-            fetch('http://localhost:5000/products/iphone').then(res => res.json()).then(data => setProductsIphone(data)),
-            fetch('http://localhost:5000/products/macbook').then(res => res.json()).then(data => setProductsMacbook(data))
+            fetch('process.env.REACT_APP_SERVER_URL/products/iphone').then(res => res.json()).then(data => setProductsIphone(data)),
+            fetch('process.env.REACT_APP_SERVER_URL/products/macbook').then(res => res.json()).then(data => setProductsMacbook(data))
         ]).catch(err => console.log(err));
     }, [])
 
